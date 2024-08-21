@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Result</title>
+</head>
+<body>
+<h1>Weather in {{ city }} on {{ date }}</h1>
+<p>Temperature: {{ current_temp }}C</p>
+{% if current_weather_description %}
+<p>Weather Description: {{ current_weather_description }}</p>
+{% endif %}
+{% if min_temp and max_temp %}
+<p>Min Temperature: {{ min_temp }}K</p>
+<p>Max Temperature: {{ max_temp }}K</p>
+{% endif %}
+<br>
+<a href="/">Go back</a>
+</body>
+</html>
